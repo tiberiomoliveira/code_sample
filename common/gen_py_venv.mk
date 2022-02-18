@@ -1,4 +1,5 @@
 PYTHON := /usr/bin/python3
+SHELL := /bin/bash # Make sure SHELL is bash as source is being used - It failed on GitHub runners
 VENV_PATH := $(CODE_SAMPLE_DIR)/.venv
 VENV_DONE := $(CODE_SAMPLE_DIR)/.venv.sentinel
 
