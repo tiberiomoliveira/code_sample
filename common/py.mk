@@ -9,8 +9,8 @@ all: check lint-check
 
 check: $(VENV_DONE) $(TESTS)
 	coverage run -m unittest discover -b -v -s tests
-	coverage report --fail-under=95
+	coverage report --fail-under=100
 	coverage html -d .html_coverage
 
 lint-check: $(VENV_DONE) *.py $(TESTS)
-	pylint $^ --reports=no
+	pylint $^
