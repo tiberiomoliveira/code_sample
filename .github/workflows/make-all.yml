@@ -1,0 +1,25 @@
+# This workflow will run 'make all' for all projects.
+# It will install a single version of Python.
+
+name: Make All
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.10"
+    - name: Run make
+      run: |
+        make all
