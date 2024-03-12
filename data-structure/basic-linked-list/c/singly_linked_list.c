@@ -1,4 +1,3 @@
-#include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -44,7 +43,6 @@ void search_data(struct node* head, uint8_t search_data) {
 }
 
 void delete_data(struct node* head, uint8_t data) {
-    bool found = false;
     struct node* prev_node = NULL;
 
     while (head != NULL) {
